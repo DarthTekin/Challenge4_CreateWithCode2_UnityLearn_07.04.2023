@@ -14,11 +14,16 @@ public class PlayerControllerX : MonoBehaviour
 
     private float normalStrength = 10; // how hard to hit enemy without powerup
     private float powerupStrength = 25; // how hard to hit enemy with powerup
+
+    public AudioClip sumoSound;
+    public AudioClip powerupSound;
+    private AudioSource playerAudio;
     
     void Start()
     {
         playerRb = GetComponent<Rigidbody>();
-        focalPoint = GameObject.Find("Focal Point");
+        playerAudio = GetComponent<AudioSource>();
+        focalPoint = GameObject.Find("Focal Point");        
     }
 
     void Update()
@@ -37,6 +42,7 @@ public class PlayerControllerX : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Powerup"))
         {
+            playerAudio.PlayOneShot(powerupSound, 1.0f);
             Destroy(other.gameObject);
             hasPowerup = true;
             powerupIndicator.SetActive(true);
@@ -63,6 +69,7 @@ public class PlayerControllerX : MonoBehaviour
             if (hasPowerup) // if have powerup hit enemy with powerup force
             {
                 enemyRigidbody.AddForce(awayFromPlayer * powerupStrength, ForceMode.Impulse);
+                playerAudio.PlayOneShot(sumoSound, 1.0f);
             }
             else // if no powerup, hit enemy with normal strength 
             {
