@@ -7,11 +7,14 @@ public class EnemyX : MonoBehaviour
     public float speed;
     private Rigidbody enemyRb;
     public GameObject playerGoal;
+    private SpawnManagerX spawnManager;
 
     // Start is called before the first frame update
     void Start()
     {
         enemyRb = GetComponent<Rigidbody>();
+        spawnManager = FindObjectOfType<SpawnManagerX>();
+        speed = spawnManager.waveSpeed * 100;
     }
 
     // Update is called once per frame

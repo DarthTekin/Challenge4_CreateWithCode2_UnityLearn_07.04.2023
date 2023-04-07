@@ -10,6 +10,7 @@ public class SpawnManagerX : MonoBehaviour
     private float spawnRangeX = 10;
     private float spawnZMin = 15; // set min spawn Z
     private float spawnZMax = 25; // set max spawn Z
+    public float waveSpeed = 1;
 
     public int enemyCount;
     public int waveCount = 1;
@@ -24,7 +25,7 @@ public class SpawnManagerX : MonoBehaviour
 
         if (enemyCount == 0)
         {
-            //waveCount++;
+            waveSpeed++;
             SpawnEnemyWave(waveCount);
         }
 
