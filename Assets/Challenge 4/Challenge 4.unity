@@ -319,6 +319,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 8932280921958007952, guid: 47045ccb8f3944b9b8a55f6b07f0aefc, type: 3}
   powerupPrefab: {fileID: 4446131693967519089, guid: c5497424856514b2ba61b78375567988, type: 3}
+  waveSpeed: 0
   enemyCount: 0
   waveCount: 1
   player: {fileID: 583048338}
@@ -329,34 +330,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4392870381175448236, guid: 6562db3a873684fa9b7da3aef8329d82, type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 4300000, guid: 0779dbb263c79eb42a856eeb83797719, type: 3}
-    - target: {fileID: 4392870381175448236, guid: 6562db3a873684fa9b7da3aef8329d82, type: 3}
-      propertyPath: m_Materials.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4392870381175910774, guid: 6562db3a873684fa9b7da3aef8329d82, type: 3}
-      propertyPath: InitialModule.maxNumParticles
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 4392870381175910774, guid: 6562db3a873684fa9b7da3aef8329d82, type: 3}
-      propertyPath: InitialModule.startColor.maxColor.b
-      value: 0.008677464
-      objectReference: {fileID: 0}
-    - target: {fileID: 4392870381175910774, guid: 6562db3a873684fa9b7da3aef8329d82, type: 3}
-      propertyPath: InitialModule.startColor.maxColor.g
-      value: 0.03626465
-      objectReference: {fileID: 0}
-    - target: {fileID: 4392870381175910774, guid: 6562db3a873684fa9b7da3aef8329d82, type: 3}
-      propertyPath: InitialModule.startColor.maxColor.r
-      value: 0.122641504
-      objectReference: {fileID: 0}
-    - target: {fileID: 4392870381175910774, guid: 6562db3a873684fa9b7da3aef8329d82, type: 3}
-      propertyPath: InitialModule.gravityModifier.scalar
-      value: -0.2
-      objectReference: {fileID: 0}
     - target: {fileID: 4392870381195268594, guid: 6562db3a873684fa9b7da3aef8329d82, type: 3}
       propertyPath: m_RootOrder
       value: 1
